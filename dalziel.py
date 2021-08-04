@@ -1,3 +1,4 @@
+
 ciudadescount = {} # se creea un diccionario 
 import csv # para poder leer el archivo csv
 with open('../Odalis_ExamenParcial1/Dalziel2016_data.csv', 'r') as T: 
@@ -22,7 +23,7 @@ with open('1dalziel.csv', 'r') as T:
         cases = float(line['cases'])# se trasforman los datos a float; es decir no enteros 
         ciudadcases[myciudad] = ciudadcases.get(myciudad, [0,0]) # se obtine el primer valor de la lista 
         ciudadcases[myciudad][0] = ciudadcases[myciudad][0] + pop # se obtine el segundo valor de la
-#                                                                lista (numero de registo actualizado) 
+# Primera Funcion                                                                lista (numero de registo actualizado) 
         ciudadcases[myciudad][1] = ciudadcases[myciudad][1] + cases 
 def avgcity(city): 
     for city in ciudadcases.keys():  # Keys Crea una lista que contiene las claves del diccionario
