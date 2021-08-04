@@ -50,3 +50,20 @@ def avgyear(city, my_csv):
         if key == city:
             avg_case = 100000*citypop[key][1]/citypop[key][0]
             return print(key, avg_case)
+# tercera funcion 
+def avgyear(city, my_csv):
+    citypop = ()
+    for line in my_csv:
+        mycity = line ['loc']
+        pop= float (line['pop'])
+        if line['cases'] != "NA":
+            cases = float (line['cases'])
+            citypop[mycity]= citypop.get(mycity,[0,0,0])
+            citypop[mycity][0]= citypop[0]+ pop
+            citypop[mycity][1]= citypop[1]+ case
+            citypop[mycity][2]= citypop[2]+ 1
+    for key in citypop:
+        if key == city:
+            avg_case = 100000*citypop[key][1]/citypop[key][0]
+            return print(key, avg_case)
+
